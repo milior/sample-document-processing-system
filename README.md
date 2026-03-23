@@ -6,7 +6,7 @@ A streamlined document processing application built with .NET 8 Blazor Server th
 
 ## 🌟 Key Features
 
-- **🤖 AI-Powered Processing**: Integration with AWS Bedrock (Claude 3.5 Sonnet) for intelligent document summarization
+- **🤖 AI-Powered Processing**: Integration with AWS Bedrock (Claude 3.7 Sonnet) for intelligent document summarization
 - **📁 Multi-Format Support**: Process PDF documents with text extraction
 - **📤 Easy Upload**: Drag-and-drop interface for document uploads
 - **☁️ Flexible Storage**: Support for both AWS S3 and local file storage
@@ -37,7 +37,7 @@ DPS/
 - .NET 8.0 SDK or later
 - SQL Server or PostgreSQL database
 - AWS Account with:
-  - Bedrock access (Claude 3.5 Sonnet model)
+  - Bedrock access (Claude 3.7 Sonnet model)
   - S3 bucket (optional, for cloud storage)
   - Secrets Manager (for database credentials)
 - AWS CLI configured with appropriate credentials
@@ -160,7 +160,7 @@ Storage is configured automatically based on AWS credentials availability.
   - PostgreSQL support (via configuration)
 
 - **Cloud Services**:
-  - AWS Bedrock (Claude 3.5 Sonnet for AI processing)
+  - AWS Bedrock (Claude 3.7 Sonnet for AI processing)
   - AWS S3 (Document storage)
   - AWS Secrets Manager (Credential management)
 
@@ -198,8 +198,8 @@ src/DocumentProcessor.Web/
 
 ### AWS Bedrock Model
 
-The application uses Claude 3.5 Sonnet v2 by default:
-- Model ID: `anthropic.claude-3-5-sonnet-20241022-v2:0`
+The application uses Claude 3.7 Sonnet v2 by default:
+- Model ID: `us.anthropic.claude-3-7-sonnet-20250219-v1:0`
 - Region: Configured via AWS CLI or environment variables
 - Max Tokens: 1024 for summaries
 
